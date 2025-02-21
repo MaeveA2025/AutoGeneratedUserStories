@@ -1,11 +1,11 @@
-// components/ProjectView.tsx
+"use client"
+
 import React, { useState, useCallback, useEffect } from "react";
 import StoryCard from "./StoryCard";
-import { useChat } from "ai/react";
 import { readStreamableValue } from "ai/rsc";
 import { generate, saveProject } from "../lib/actions";
 import { Story } from "../models/story";
-import ProjectBar from "./ProjectBar";
+import { useChat } from "@ai-sdk/react";
 
 interface ProjectViewProps {
     stories: Story[];
